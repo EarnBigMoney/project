@@ -16,7 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/mainapps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/extapps" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.6.5 (D:\Study Software\Python-64\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
