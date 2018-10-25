@@ -18,9 +18,12 @@ Including another URLconf
 from django.conf.urls import url,include
 import xadmin
 
-urlpatterns = [
 
+urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
+    url(r'^shows/',include('shoppingcarapp.urls')),
+    url(r'^shows/',include('goodapp.urls')),
+
 ]
 
 

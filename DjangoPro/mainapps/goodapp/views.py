@@ -1,9 +1,8 @@
 from django.shortcuts import render
+from goodapp.models import Goods
 
-def get_info(request):
-    pass
-
-
-
+def goodsinfo(request):
+    goodsinfo = Goods.objects.get()
+    return render(request,'',locals())
 
 
