@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+<<<<<<< HEAD
 from django.conf.urls import url,include
 import xadmin
 
@@ -21,6 +22,9 @@ urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
 =======
 from django.conf.urls import url,include
+=======
+from django.conf.urls import url
+>>>>>>> origin/qiubai
 import xadmin as admin
 
 urlpatterns = [
