@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """DjangoPro URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,4 +19,15 @@ import xadmin
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
+=======
+from django.conf.urls import url,include
+import xadmin as admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    # url(r'^ueditor/',include('DjangoUeditor.urls')),
+    # url(r'', toIndex),
+>>>>>>> dachao
 ]
+
+
