@@ -20,7 +20,8 @@ import xadmin
 
 urlpatterns = [
 
-    url(r'^xadmin/', xadmin.site.urls),
+    url(r'^xadmin', xadmin.site.urls),
+    url(r'^userapp/',include('userapp.urls'))
 ]
 
 
