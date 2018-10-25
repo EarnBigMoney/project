@@ -1,4 +1,5 @@
 ﻿<!doctype html>
+{% load static %}
 <html lang="zxx">
 	<head>
 		<meta charset="utf-8">
@@ -14,12 +15,12 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 		<!-- Include CSS -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.carousel.css">
-		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.theme.css">
-		<link rel="stylesheet" type="text/css" href="owl-carousel/owl.transitions.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'owl-carousel/owl.carousel.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'owl-carousel/owl.theme.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'owl-carousel/owl.transitions.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
 		<!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700,800" rel="stylesheet">--->
 
@@ -33,7 +34,7 @@
 		<!-- Loader -->
 		<div id="loader" class="loader">
 			<div class="loader-content">
-				<img src="images/loader.png" alt="Loading...">
+				<img src="{% static 'images/loader.png' %}" alt="Loading...">
 			</div>
 		</div>
 
@@ -47,7 +48,7 @@
 					<div class="col-xs-12 col-sm-5 col-md-4 flex">
 						<a href="index.html">
 							<!-- Logo -->
-							<img src="images/logo.png" class="logo img-responsive" alt="PhotoMarket">
+							<img src="{% static 'images/logo.png' %}" class="logo img-responsive" alt="PhotoMarket">
 						</a>
 					</div>
 
@@ -82,7 +83,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="images/cart-images/1.jpg" width="70" alt="item1" />
+								<img src="{% static 'images/cart-images/1.jpg' %}" width="70" alt="item1" />
 								<!-- Item Name -->
 								<span class="item-name">Rails</span>
 								<!-- Item Price -->
@@ -104,7 +105,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="images/cart-images/3.jpeg.jpg" width="70" alt="item3" />
+								<img src="{% static 'images/cart-images/3.jpeg.jpg' %}" width="70" alt="item3" />
 								<!-- Item Name -->
 								<span class="item-name">The tiger</span>
 								<!-- Item Price -->
@@ -115,7 +116,7 @@
 							<!-- Shopping cart item -->
 							<li class="clearfix">
 								<!-- Item photo -->
-								<img src="images/cart-images/4.jpeg.jpg" width="70" alt="item4" />
+								<img src="{% static 'images/cart-images/4.jpeg.jpg' %}" width="70" alt="item4" />
 								<!-- Item Name -->
 								<span class="item-name">Flowers</span>
 								<!-- Item Price -->
@@ -141,7 +142,7 @@
 					<!-- Profile info -->
 					<div class="col-md-3 col-sm-5">
 						<div class="img-profile text-center">
-							<img src="images/default.jpg" class="img-responsive" alt="John Doe">
+							<img src="{% static 'images/default.jpg' %}" class="img-responsive" alt="John Doe">
 							<div class="profile-name">
 								John Doe
 							</div>
@@ -171,91 +172,91 @@
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/3.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/3.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/1.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/1.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/2.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/2.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/4.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/4.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/1.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/1.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/4.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/4.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/3.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/3.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/2.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/2.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/3.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/3.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/1.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/1.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/2.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/2.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/4.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/4.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/1.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/1.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/4.jpeg.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/4.jpeg.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
 							<div class="grid-item">
 								<a href="picture.html">
-									<img src="images/your-photos/3.jpg" class="img-responsive" alt="your-photo">
+									<img src="{% static 'images/your-photos/3.jpg' %}" class="img-responsive" alt="your-photo">
 								</a>
 							</div>
 
@@ -269,7 +270,7 @@
 						<!-- photo list item -->
 						<div class="media photo-list">
 							<a href="#">
-								<img src="images/photos/1.jpg" class="img-responsive margin-bottom-20" alt="Last sale photo 1">
+								<img src="{% static 'images/photos/1.jpg' %}" class="img-responsive margin-bottom-20" alt="Last sale photo 1">
 							</a>
 							<div class="media-body">
 								<div class="row">
@@ -292,7 +293,7 @@
 						<!-- photo list item -->
 						<div class="media photo-list">
 							<a href="#">
-								<img src="images/photos/1.jpg" class="img-responsive margin-bottom-20" alt="Last sale photo 2">
+								<img src="{% static 'images/photos/1.jpg' %}" class="img-responsive margin-bottom-20" alt="Last sale photo 2">
 							</a>
 							<div class="media-body">
 								<div class="row">
@@ -401,11 +402,10 @@
 		</div>
 
 		<!-- Include Scripts -->
-		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="owl-carousel/owl.carousel.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'owl-carousel/owl.carousel.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 
 		<script type="text/javascript">
 
