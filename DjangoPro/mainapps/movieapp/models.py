@@ -4,6 +4,7 @@ from django.db import models
 # 电影表
 
 class Movie(models.Model):
+
     movie_url = models.CharField(max_length=150,verbose_name='电影图片',
                                  blank=True, default='')
 

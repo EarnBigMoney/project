@@ -2,6 +2,7 @@ from django.db import models
 
 #所属用户模型
 class Userinfo(models.Model):
+
     name = models.CharField(max_length=20,verbose_name='用户名')
     sex = models.CharField(max_length=10,blank=True,verbose_name='性别')
     tel_num = models.IntegerField(verbose_name='电话')
@@ -16,6 +17,7 @@ class Userinfo(models.Model):
 
 #购物车模型
 class Shoppingcar(models.Model):
+
     goods_name = models.CharField(max_length=20,verbose_name='商品名称')
     goods_count = models.IntegerField(verbose_name='商品数量')
     goods_price = models.FloatField(verbose_name='商品价格')
@@ -33,6 +35,7 @@ class Shoppingcar(models.Model):
 
 #订单模型
 class Order(models.Model):
+    # 自定义字段
     order_num = models.CharField(max_length=50,verbose_name='订单号')
     order_address = models.CharField(max_length=100,verbose_name='收货地址')
     order_price = models.DecimalField(max_digits=8,decimal_places=2,verbose_name='订单金额')
