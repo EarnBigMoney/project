@@ -34,6 +34,8 @@ class Movie(models.Model):
 
     movie_hits = models.IntegerField(verbose_name='点击量')
 
+    is_delete = models.IntegerField(default='0', choices=((0, '否'), (1, '是')), verbose_name='是否删除')
+
     def __str__(self):
         return self.movie_name
 
