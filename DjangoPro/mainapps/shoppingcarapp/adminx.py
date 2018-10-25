@@ -9,6 +9,6 @@ class UserinfoAdmin():
     list_disaplay = ['name','sex','tel_num']
 
 class OrderAdmin():
-    list_disaplay = ['order_num', 'order_address', 'order_price', 'order_user']
+    list_disaplay = ['order_num', 'order_address', 'order_price', 'order_user','order_date']
 
 xadmin.site.register(Shoppingcar,ShoppingcarAdmin)

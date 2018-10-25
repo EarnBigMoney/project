@@ -88,6 +88,7 @@ class RegisterView(View):
         username = request.POST["user_name"]
         password = request.POST["pwd"]
         email = request.POST["email"]
+        allow = request.POST["allow"]
         if not all([username, password, email]):
             return render(request, "user_app/register.html", {"msg": "数据不完整"})
         if not re.match(r'^[a-z0-9][\w.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
@@ -101,6 +102,7 @@ class RegisterView(View):
         if user:
            return render(request, "user_app/register.html", {"msg": "该用户名已存在"})
         serializer = Serializer(settings.SECRET_KEY, 60)
+
         info = {"confirm": user.id}
         token = serializer.dumps(info)
         token = token.decode()

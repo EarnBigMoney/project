@@ -82,8 +82,7 @@ DATABASES = {
         'NAME': 'project',
         'USER': 'root',
         'PASSWORD': '123456',
-        # 'HOST': '10.35.165.57',
-        'HOST':'localhost',
+        'HOST': '10.35.165.57',
         'CHARSET': 'utf8',
     }
 }

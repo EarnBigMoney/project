@@ -43,6 +43,8 @@ class Order(models.Model):
     order_user = models.ForeignKey(Userinfo,on_delete=models.CASCADE,
                         max_length=20, verbose_name='所属用户')
 
+    order_date = models.DateTimeField(blank=True, verbose_name='下单时间',auto_now_add=True)
+
     def __str__(self):
         return self.order_num
 
