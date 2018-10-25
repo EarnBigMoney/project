@@ -2,6 +2,7 @@ from django.db import models
 
 #商品模型
 class Goods(models.Model):
+
     product_title = models.CharField(max_length=20,verbose_name='商品名')
     product_desc = models.CharField(max_length=50,verbose_name='商品描述')
     product_prices = models.FloatField(verbose_name='商品价格')
