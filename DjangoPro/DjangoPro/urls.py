@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^movie/',include('movieapp.urls',namespace='movie')),
     url(r'^car/',include('shoppingcarapp.urls',namespace='car')),
     url(r'^index/',index)
+
 ]
 
 
