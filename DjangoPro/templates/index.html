@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-
+{% load static %}
 <html lang="zxx">
 <head>
 <meta charset="utf-8">
@@ -7,75 +7,61 @@
 <meta name="keywords" content="">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <!-- Title -->
-<title>Home</title>
+<title>西安豆瓣</title>
 
 <!-- Favicon -->
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
 <!-- Include CSS -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="owl-carousel/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="owl-carousel/owl.theme.css">
-<link rel="stylesheet" type="text/css" href="owl-carousel/owl.transitions.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'owl-carousel/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'owl-carousel/owl.theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'owl-carousel/owl.transitions.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 <!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,700,800" rel="stylesheet">--->
-
 </head>
-
 <body>
-
- 
-
-
 <!-- Loader -->
 <div id="loader" class="loader">
 	<div class="loader-content">
-		<img src="images/loader.png" alt="Loading...">
+		<img src="{% static 'images/loader.png' %}" alt="Loading...">
 	</div>
 </div>
-
 <!-- Header container -->
 <div class="header-bg">
 	<!-- Container -->
 	<div class="container">
-
 		<div class="row flex">
 			<!-- Logo column -->
 			<div class="col-xs-12 col-sm-5 col-md-4 flex">
 				<a href="index.html">
 					<!-- Logo -->
-					<img src="images/logo.png" class="logo img-responsive" alt="PhotoMarket">
+					<img src="{% static 'images/logo.png' %}" class="logo img-responsive" alt="PhotoMarket">
 				</a>
 			</div>
-
 			<!-- Menu column -->
 			<div class="col-xs-12 col-sm-7 col-md-8 flex flex-center">
 				<!-- Menu -->
 				<ul class="nav nav-pills">
-					<li role="presentation"><a href="#" id="cart" data-toggle="tooltip" data-placement="bottom" title="Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge">4</span></a></li>
-					<li role="presentation"><a href="#">Log out</a></li>
-					<li role="presentation"><a href="account.html">Your Account</a></li>
-					<li role="presentation"><a href="login.html"><b>Welcome,</b> <span>log in</span></a></li>
+					<li role="presentation"><a href="#" id="cart" data-toggle="tooltip" data-placement="bottom" title="Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge">0</span></a></li>
+					<li role="presentation"><a href="#">退出</a></li>
+					<li role="presentation"><a href="{% url 'car:go' %}">你的账户</a></li>
+					<li role="presentation"><a href="login.html"><b>欢迎,</b> <span>登陆</span></a></li>
 				</ul>
-
 			</div>
 		</div>
-
 		<!-- Shopping cart -->
 		<div class="container absolute cart-container">
 			<div class="shopping-cart">
 				<!-- Shopping cart header -->
 				<div class="shopping-cart-header">
 					<!-- Total products in cart -->
-					<i class="fa fa-shopping-cart cart-icon"></i><span class="badge">4</span>
+					<i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><!-- 购物车订单量--></span>
 					<!-- Total cart -->
 					<div class="shopping-cart-total">
-						<span class="lighter-text">Total:</span>
-						<span class="main-color-text">$34.98</span>
+						<span class="lighter-text">总计</span>
+						<span class="main-color-text">34.98</span>
 					</div>
 				</div>
 				<!-- Shopping cart items -->
@@ -83,7 +69,7 @@
 					<!-- Shopping cart item -->
 					<li class="clearfix">
 						<!-- Item photo -->
-						<img src="images/cart-images/1.jpg" width="70" alt="item1" />
+						<img src="{% static 'images/cart-images/1.jpg' %}" width="70" alt="item1" />
 						<!-- Item Name -->
 						<span class="item-name">Rails</span>
 						<!-- Item Price -->
@@ -94,7 +80,7 @@
 					<!-- Shopping cart item -->
 					<li class="clearfix">
 						<!-- Item photo -->
-						<img src="images/cart-images/2.jpg" width="70" alt="item2" />
+						<img src="{% static 'images/cart-images/2.jpg' %}" width="70" alt="item2" />
 						<!-- Item Name -->
 						<span class="item-name">Forest leaves</span>
 						<!-- Item Price -->
@@ -105,7 +91,7 @@
 					<!-- Shopping cart item -->
 					<li class="clearfix">
 						<!-- Item photo -->
-						<img src="images/cart-images/3.jpeg.jpg" width="70" alt="item3" />
+						<img src="{% static 'images/cart-images/3.jpeg.jpg' %}" width="70" alt="item3" />
 						<!-- Item Name -->
 						<span class="item-name">The tiger</span>
 						<!-- Item Price -->
@@ -116,7 +102,7 @@
 					<!-- Shopping cart item -->
 					<li class="clearfix">
 						<!-- Item photo -->
-						<img src="images/cart-images/4.jpeg.jpg" width="70" alt="item4" />
+						<img src="{% static 'images/cart-images/4.jpeg.jpg' %}" width="70" alt="item4" />
 						<!-- Item Name -->
 						<span class="item-name">Flowers</span>
 						<!-- Item Price -->
@@ -126,13 +112,12 @@
 					</li>
 				</ul>
 				<!-- Checkout button -->
-				<a href="checkout.html" class="button">Checkout</a>
+				<a href="checkout.html" class="button">退出</a>
 			</div>
 		</div>
 
 	</div>
 </div>
-
 <!-- Navbar menu -->
 <nav class="navbar navbar-default nav-top">
 	<div class="container-fluid">
@@ -151,23 +136,22 @@
 
 				<!-- Categories dropdown -->
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">所有分类<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="category.html">Nature</a></li>
-						<li><a href="category.html">Weddings</a></li>
-						<li><a href="category.html">Landscape</a></li>
-						<li><a href="category.html">Animals</a></li>
+						<li><a href="category.html" style="font-size: 18px;color: red">书籍</a></li>
+						<li><a href="category.html" style="font-size: 18px;color: blue">电影</a></li>
+						<li><a href="category.html" style="font-size: 18px;color: orange">商品</a></li>
+						<li><a href="category.html" style="font-size: 18px;color: yellow">更多</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="all-categories.html">See all</a></li>
+{#						<li><a href="all-categories.html">查看所有</a></li>#}
 					</ul>
 				</li>
 
 				<!-- Other options -->
-				<li><a href="#">Most selled</a></li>
-				<li><a href="#">Populars</a></li>
-				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="{% url 'book:go' %}">书籍</a></li>
+				<li><a href="{% url 'movie:go' %}">电影</a></li>
+				<li><a href="{% url 'good:go' %}">商品</a></li>
 			</ul>
-
 		</div>
 	</div>
 </nav>
@@ -182,21 +166,18 @@
 		</form>
 	</div>
 	<div class="bottom-text">
-		Awesome pictures, awesome prices!
+		欢迎来到西安豆瓣
 	</div>
 </div>
 
 <!-- Page container -->
 <div class="inner-content-home">
 	<div class="container">
-
 		<div class="row margin-bottom-20">
-
 			<!-- Top categories -->
 			<div class="col-sm-8">
 				<h4 class="title">Top categories</h4>
 				<div class="line-dec"></div>
-
 				<!-- Top categories slider -->
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
@@ -212,7 +193,7 @@
 
 						<!-- Top categories (item) -->
 						<div class="item active">
-							<img src="images/slider/1.jpeg.jpg" alt="Image 1">
+							<img src="{% static 'images/slider/1.jpeg.jpg' %}" alt="Image 1">
 							<div class="carousel-caption">
 								Weddings and special events
 							</div>
@@ -220,7 +201,7 @@
 
 						<!-- Top categories (item) -->
 						<div class="item">
-							<img src="images/slider/2.jpg" alt="Image 2">
+							<img src="{% static 'images/slider/2.jpg' %}" alt="Image 2">
 							<div class="carousel-caption">
 								Landscape and nature
 							</div>
@@ -228,13 +209,12 @@
 
 						<!-- Top categories (item) -->
 						<div class="item">
-							<img src="images/slider/3.jpg" alt="Image 3">
+							<img src="{% static 'images/slider/3.jpg' %}" alt="Image 3">
 							<div class="carousel-caption">
 								Animals
 							</div>
 						</div>
 					</div>
-
 					<!-- Top categories (arrows) -->
 					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left fa fa-angle-left" aria-hidden="true"></span>
@@ -244,15 +224,13 @@
 					</a>
 				</div>
 			</div>
-
 			<!-- Tip of the day column -->
 			<div class="col-sm-4">
 				<h4 class="title">Tip of the day</h4>
 				<div class="line-dec"></div>
-
 				<!-- Tip of the day -->
 				<div class="thumbnail">
-					<img src="images/tip.jpeg.jpg" alt="Tip of the day">
+					<img src="{% static 'images/tip.jpeg.jpg' %}" alt="Tip of the day">
 					<div class="caption">
 						<h3>¿How to get best bokeh effect?</h3>
 						<p class="sm-hide">
@@ -261,94 +239,76 @@
 						<p><a href="#" class="btn btn-primary" role="button">Read more</a>
 					</div>
 				</div>
-
 			</div>
 		</div>
-
 		<!-- Information row -->
 		<div class="row">
-
 			<!-- Discount alert -->
 			<div class="col-sm-8">
 				<div class="alert alert-warning" role="alert"><b>40%</b> of discount in <a href="#"><b>Nature</b></a> category</div>
 			</div>
-
 			<!-- Register button -->
 			<div class="col-sm-4">
 				<button type="submit" class="btn btn-block btn-success register-btn">¡REGISTER NOW!</button>
 			</div>
 		</div>
-
 		<!-- Recent photos row -->
 		<div class="row">
 			<div class="col-sm-12">
 				<h4 class="title">Recent photos</h4>
 				<div class="line-dec"></div>
-
 				<!-- Recent photos carousel -->
 				<div id="recent-photos">
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_1">
 						<!-- Price ribbon -->
 						<div class="ribbon"><span>19$</span></div>
 					</div>
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_2">
 						<!-- Price ribbon -->
 						<div class="ribbon"><span>5$</span></div>
 					</div>
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_3">
 						<!-- Price ribbon -->
 						<div class="ribbon"><span>9$</span></div>
 					</div>
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_4">
 						<!-- Price ribbon -->
 						<div class="ribbon"><span>10$</span></div>
 					</div>
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_5">
 						<div class="ribbon"><span>FREE</span></div>
 					</div>
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_6">
 						<!-- Price ribbon -->
 						<div class="ribbon"><span>15$</span></div>
 					</div>
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_7">
 						<!-- Price ribbon -->
 						<div class="ribbon"><span>FREE</span></div>
 					</div>
-
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_8">
 						<!-- Price ribbon -->
 						<div class="ribbon"><span>19$</span></div>
 					</div>
-
 				</div>
 			</div>
 		</div>
-
-		<!-- Categories -->
+        <!-- Categories -->
 		<div class="row">
 			<div class="col-sm-12" id="#categories">
 				<h4 class="title">Our categories <small><span class="badge">245.557</span> photos in our stock</small></h4>
 				<div class="line-dec"></div>
 			</div>
 		</div>
-
 		<div class="row">
-
 			<div class="col-sm-3">
 				<div class="category-block" id="architecture">
 					<a href="category.html">
@@ -356,7 +316,6 @@
 					</a>
 				</div>
 			</div>
-
 			<div class="col-sm-3">
 				<div class="category-block" id="food">
 					<a href="category.html">
@@ -364,7 +323,6 @@
 					</a>
 				</div>
 			</div>
-
 			<div class="col-sm-3">
 				<div class="category-block" id="cars">
 					<a href="category.html">
@@ -372,7 +330,6 @@
 					</a>
 				</div>
 			</div>
-
 			<div class="col-sm-3">
 				<div class="category-block" id="landscapes">
 					<a href="category.html">
@@ -380,11 +337,8 @@
 					</a>
 				</div>
 			</div>
-
 		</div>
-
 		<div class="row">
-
 			<div class="col-sm-6">
 				<div class="category-block" id="people">
 					<a href="category.html">
@@ -392,7 +346,6 @@
 					</a>
 				</div>
 			</div>
-
 			<div class="col-sm-6">
 				<div class="category-block" id="music">
 					<a href="category.html">
@@ -400,9 +353,7 @@
 					</a>
 				</div>
 			</div>
-
 		</div>
-
 		<div class="row">
 
 			<div class="col-sm-6">
@@ -544,10 +495,10 @@
 </div>
 
 <!-- Include Scripts -->
-<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="owl-carousel/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="{% static 'js/jquery-3.1.0.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'owl-carousel/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>

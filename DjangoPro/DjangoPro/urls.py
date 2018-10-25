@@ -16,11 +16,22 @@ Including another URLconf
 """
 
 from django.conf.urls import url,include
+from django.shortcuts import render
+
 import xadmin
+
+def index(request):
+
+    return render(request,'index.html')
 
 urlpatterns = [
 
     url(r'^xadmin/', xadmin.site.urls),
+    url(r'^goods/',include('goodapp.urls',namespace='good')),
+    url(r'^book/',include('bookapp.urls',namespace='book')),
+    url(r'^movie/',include('movieapp.urls',namespace='movie')),
+    url(r'^car/',include('shoppingcarapp.urls',namespace='car')),
+    url(r'^index/',index)
 ]
 
 
