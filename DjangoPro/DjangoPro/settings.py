@@ -4,18 +4,10 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#将Sources ROOT 添加到Python解释器中
->>>>>>> dachao
-sys.path.insert(0,os.path.join(BASE_DIR,'mainapps'))
-sys.path.insert(1,os.path.join(BASE_DIR,'extapps'))
-=======
-#将Sourdces ROOT添加到python 解释器中
+
 sys.path.insert(0, os.path.join(BASE_DIR, 'mainapps'))
 sys.path.insert(1, os.path.join(BASE_DIR, 'extapps'))
->>>>>>> origin/qiubai
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -27,10 +19,8 @@ SECRET_KEY = '^t&!l9wbh+u1isc*=r1)uz7-@c$*%2%l#b2-cwx1q$i92ro4t)'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/qiubai
+
 
 # Application definition
 
@@ -42,20 +32,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-<<<<<<< HEAD
     'bookapp',
     'goodapp',
     'movieapp',
     'userapp',
-=======
-    'goodapp',
     'shoppingcarapp',
->>>>>>> dachao
-=======
-    'bookapp',
-    'movieapp',
->>>>>>> origin/qiubai
+    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [
@@ -97,20 +79,11 @@ WSGI_APPLICATION = 'DjangoPro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-<<<<<<< HEAD
         'NAME': 'project',
         'USER': 'root',
         'PASSWORD': '123456',
         'HOST': '10.35.165.57',
-        'PORT': 3306,
-=======
-        'NAME':'project',
-        'HOST': '10.35.165.57',
-        'PORT': 3306,
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'CHARSET':'utf8'
->>>>>>> origin/qiubai
+        'CHARSET': 'utf8',
     }
 }
 
