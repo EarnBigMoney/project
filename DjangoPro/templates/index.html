@@ -37,7 +37,7 @@
 			<div class="col-xs-12 col-sm-5 col-md-4 flex">
 				<a href="index.html">
 					<!-- Logo -->
-					<img src="{% static 'images/logo.png' %}" class="logo img-responsive" alt="PhotoMarket">
+					<img src="{% static 'images/logo.png' %}"  class="logo img-responsive" alt="PhotoMarket">
 				</a>
 			</div>
 			<!-- Menu column -->
@@ -46,8 +46,9 @@
 				<ul class="nav nav-pills">
 					<li role="presentation"><a href="#" id="cart" data-toggle="tooltip" data-placement="bottom" title="Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge">0</span></a></li>
 					<li role="presentation"><a href="#">退出</a></li>
+                    <li role="presentation"><a href="#"><span>注册</span></a></li>
 					<li role="presentation"><a href="{% url 'car:go' %}">你的账户</a></li>
-					<li role="presentation"><a href="login.html"><b>欢迎,</b> <span>登陆</span></a></li>
+					<li role="presentation"><a href="#"><b>欢迎,</b> <span>登陆</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -138,9 +139,9 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">所有分类<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="category.html" style="font-size: 18px;color: red">书籍</a></li>
-						<li><a href="category.html" style="font-size: 18px;color: blue">电影</a></li>
-						<li><a href="category.html" style="font-size: 18px;color: orange">商品</a></li>
+						<li><a href="{% url 'book:go' %}" style="font-size: 18px;color: red">书籍</a></li>
+						<li><a href="{% url 'movie:go' %}" style="font-size: 18px;color: blue">电影</a></li>
+						<li><a href="{% url 'good:go' %}" style="font-size: 18px;color: orange">商品</a></li>
 						<li><a href="category.html" style="font-size: 18px;color: yellow">更多</a></li>
 						<li role="separator" class="divider"></li>
 {#						<li><a href="all-categories.html">查看所有</a></li>#}
@@ -166,7 +167,7 @@
 		</form>
 	</div>
 	<div class="bottom-text">
-		欢迎来到西安豆瓣
+		    hello ! ! ! , 欢迎来到千峰Python-1803
 	</div>
 </div>
 
@@ -176,7 +177,7 @@
 		<div class="row margin-bottom-20">
 			<!-- Top categories -->
 			<div class="col-sm-8">
-				<h4 class="title">Top categories</h4>
+				<h4 class="title">热门分类</h4>
 				<div class="line-dec"></div>
 				<!-- Top categories slider -->
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -195,7 +196,7 @@
 						<div class="item active">
 							<img src="{% static 'images/slider/1.jpeg.jpg' %}" alt="Image 1">
 							<div class="carousel-caption">
-								Weddings and special events
+								热门电影
 							</div>
 						</div>
 
@@ -203,7 +204,7 @@
 						<div class="item">
 							<img src="{% static 'images/slider/2.jpg' %}" alt="Image 2">
 							<div class="carousel-caption">
-								Landscape and nature
+								精品书籍
 							</div>
 						</div>
 
@@ -211,7 +212,7 @@
 						<div class="item">
 							<img src="{% static 'images/slider/3.jpg' %}" alt="Image 3">
 							<div class="carousel-caption">
-								Animals
+								时尚潮品
 							</div>
 						</div>
 					</div>
@@ -226,17 +227,17 @@
 			</div>
 			<!-- Tip of the day column -->
 			<div class="col-sm-4">
-				<h4 class="title">Tip of the day</h4>
+				<h4 class="title">每日提示</h4>
 				<div class="line-dec"></div>
 				<!-- Tip of the day -->
 				<div class="thumbnail">
 					<img src="{% static 'images/tip.jpeg.jpg' %}" alt="Tip of the day">
 					<div class="caption">
-						<h3>¿How to get best bokeh effect?</h3>
+						<h3>美文推荐</h3>
 						<p class="sm-hide">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
 						</p>
-						<p><a href="#" class="btn btn-primary" role="button">Read more</a>
+						<p><a href="#" class="btn btn-primary" role="button">阅读更多</a>
 					</div>
 				</div>
 			</div>
@@ -245,17 +246,17 @@
 		<div class="row">
 			<!-- Discount alert -->
 			<div class="col-sm-8">
-				<div class="alert alert-warning" role="alert"><b>40%</b> of discount in <a href="#"><b>Nature</b></a> category</div>
+{#				<div class="alert alert-warning" role="alert"><b>大力</b>折扣 <a href="#"><b></b></a> 各种类别</div>#}
 			</div>
 			<!-- Register button -->
 			<div class="col-sm-4">
-				<button type="submit" class="btn btn-block btn-success register-btn">¡REGISTER NOW!</button>
+				<button type="submit" class="btn btn-block btn-success register-btn">立即注册</button>
 			</div>
 		</div>
 		<!-- Recent photos row -->
 		<div class="row">
 			<div class="col-sm-12">
-				<h4 class="title">Recent photos</h4>
+				<h4 class="title">热门商品</h4>
 				<div class="line-dec"></div>
 				<!-- Recent photos carousel -->
 				<div id="recent-photos">
@@ -281,7 +282,7 @@
 					</div>
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_5">
-						<div class="ribbon"><span>FREE</span></div>
+						<div class="ribbon"><span>免费</span></div>
 					</div>
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_6">
@@ -291,7 +292,7 @@
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_7">
 						<!-- Price ribbon -->
-						<div class="ribbon"><span>FREE</span></div>
+						<div class="ribbon"><span>免费</span></div>
 					</div>
 					<!-- Recent photo (item) -->
 					<div class="item" id="photo_8">
@@ -304,7 +305,7 @@
         <!-- Categories -->
 		<div class="row">
 			<div class="col-sm-12" id="#categories">
-				<h4 class="title">Our categories <small><span class="badge">245.557</span> photos in our stock</small></h4>
+				<h4 class="title">我们的分类<small><span class="badge"></span></small></h4>
 				<div class="line-dec"></div>
 			</div>
 		</div>
@@ -312,28 +313,28 @@
 			<div class="col-sm-3">
 				<div class="category-block" id="architecture">
 					<a href="category.html">
-						<span>Architecture</span>
+						<span>书籍</span>
 					</a>
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="category-block" id="food">
 					<a href="category.html">
-						<span>Food</span>
+						<span>潮品</span>
 					</a>
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="category-block" id="cars">
 					<a href="category.html">
-						<span>Cars</span>
+						<span>电影</span>
 					</a>
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="category-block" id="landscapes">
 					<a href="category.html">
-						<span>Landscapes</span>
+						<span>书籍</span>
 					</a>
 				</div>
 			</div>
@@ -342,14 +343,14 @@
 			<div class="col-sm-6">
 				<div class="category-block" id="people">
 					<a href="category.html">
-						<span>People</span>
+						<span>潮品</span>
 					</a>
 				</div>
 			</div>
 			<div class="col-sm-6">
 				<div class="category-block" id="music">
 					<a href="category.html">
-						<span>Music</span>
+						<span>书籍</span>
 					</a>
 				</div>
 			</div>
@@ -359,7 +360,7 @@
 			<div class="col-sm-6">
 				<div class="category-block" id="technology">
 					<a href="category.html">
-						<span>Technology</span>
+						<span>电影</span>
 					</a>
 				</div>
 			</div>
@@ -367,7 +368,7 @@
 			<div class="col-sm-3">
 				<div class="category-block" id="houses">
 					<a href="category.html">
-						<span>Houses</span>
+						<span>潮品</span>
 					</a>
 				</div>
 			</div>
@@ -375,7 +376,7 @@
 			<div class="col-sm-3">
 				<div class="category-block" id="pets">
 					<a href="category.html">
-						<span>Pets</span>
+						<span>书籍</span>
 					</a>
 				</div>
 			</div>
@@ -387,7 +388,7 @@
 			<div class="col-sm-3">
 				<div class="category-block" id="animals">
 					<a href="category.html">
-						<span>Animals</span>
+						<span>电影</span>
 					</a>
 				</div>
 			</div>
@@ -395,21 +396,18 @@
 			<div class="col-sm-3">
 				<div class="category-block" id="random">
 					<a href="category.html">
-						<span>Random</span>
+						<span>随机</span>
 					</a>
 				</div>
 			</div>
-
 			<div class="col-sm-6">
 				<div class="category-block" id="others">
 					<a href="category.html">
-						<span>Others</span>
+						<span>其他</span>
 					</a>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 </div>
 
@@ -419,34 +417,34 @@
 		<div class="row">
 			<!-- Information column -->
 			<div class="col-sm-4">
-				<h4 class="footer-title">Information</h4>
+				<h4 class="footer-title">基本信息</h4>
 				<div class="line-dec"></div>
 				<ul>
-					<li><a href="javascript:void(0)" data-toggle="modal" data-target="#legalModal">Legal advice</a></li>
-					<li><a href="javascript:void(0)" data-toggle="modal" data-target="#termsModal">Terms and conditions</a></li>
-					<li><a href="about-us.html">About us</a></li>
+					<li><a href="javascript:void(0)" data-toggle="modal" data-target="#legalModal">法律咨询</a></li>
+					<li><a href="javascript:void(0)" data-toggle="modal" data-target="#termsModal">条款和条件</a></li>
+					<li><a href="about-us.html">关于我们</a></li>
 				</ul>
 			</div>
 
 			<!-- Offers column -->
 			<div class="col-sm-4">
-				<h4 class="footer-title">Our offers</h4>
+				<h4 class="footer-title">我们的优惠</h4>
 				<div class="line-dec"></div>
 				<ul>
-					<li><a href="#">New photos</a></li>
-					<li><a href="#">Top sellers</a></li>
-					<li><a href="#">Discount photos</a></li>
+					<li><a href="#">新上架商品</a></li>
+					<li><a href="#">畅销品</a></li>
+					<li><a href="#">折扣商品</a></li>
 				</ul>
 			</div>
 
 			<!-- Account column -->
 			<div class="col-sm-4">
-				<h4 class="footer-title">Your account</h4>
+				<h4 class="footer-title">你的账户</h4>
 				<div class="line-dec"></div>
 				<ul>
-					<li><a href="account.html">Your profile</a></li>
-					<li><a href="#">Personal information</a></li>
-					<li><a href="#">Shopping history</a></li>
+					<li><a href="account.html">个人信息</a></li>
+					<li><a href="#">个人资料</a></li>
+					<li><a href="#">购物历史</a></li>
 				</ul>
 			</div>
 
