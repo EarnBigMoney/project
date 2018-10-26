@@ -27,6 +27,7 @@ def index(request):
 urlpatterns = [
 
     url(r'^xadmin/', xadmin.site.urls),
+    url(r'^user/',include('userapp.urls',namespace='user')),
     url(r'^goods/',include('goodapp.urls',namespace='good')),
     url(r'^book/',include('bookapp.urls',namespace='book')),
     url(r'^movie/',include('movieapp.urls',namespace='movie')),
